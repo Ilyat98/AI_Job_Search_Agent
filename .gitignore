@@ -1,0 +1,32 @@
+# Personal CVs and all generated/local application data
+/CV/
+/data/
+*.pdf
+*.docx
+
+# Python environments and generated files
+/.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# IDE and operating-system files
+/.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local databases, reports, logs, and secrets
+*.db
+*.sqlite
+*.sqlite3
+*.xlsx
+*.log
+.env
+.env.*
+!.env.example

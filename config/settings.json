@@ -1,0 +1,172 @@
+
+{
+  "app": {
+    "timezone": "Europe/Warsaw",
+    "log_level": "INFO"
+  },
+  "search": {
+    "initial_lookback_days": 30,
+    "daily_lookback_hours": 168,
+    "minimum_fit_score": 0
+  },
+  "job_sources": {
+    "enabled": [
+      "dou",
+      "remotive",
+      "justjoin"
+    ],
+    "search_terms": [
+      "QA",
+      "software tester",
+      "test automation"
+    ],
+    "role_search_tracks": {
+      "qa": {
+        "cues": ["qa", "test engineer", "validation engineer", "software tester"],
+        "search_terms": ["Manual QA", "QA Tester", "Junior QA", "QA Automation Engineer"]
+      },
+      "game_design": {
+        "cues": ["game designer", "content designer", "gameplay designer"],
+        "search_terms": ["Gameplay Designer", "Level Designer", "LiveOps Designer"]
+      },
+      "technical_support": {
+        "cues": ["technical support", "support engineer", "it support"],
+        "search_terms": ["IT Support Engineer", "Product Support Engineer", "Application Support Engineer"]
+      },
+      "electronics": {
+        "cues": ["electrical engineer", "electronics engineer", "electronics technician"],
+        "search_terms": ["Electronics Technician", "Hardware Test Engineer"]
+      }
+    },
+    "max_results_per_feed": 25,
+    "max_results_per_source": 200,
+    "justjoin_max_detail_pages": 25
+  },
+  "job_categories": [
+    "Manual QA",
+    "Software Tester",
+    "QA Engineer",
+    "Junior QA",
+    "Automation QA",
+    "Integration Testing",
+    "QA Internship"
+  ],
+  "job_matching": {
+    "missing_required_skill_penalty": 15,
+    "max_required_skill_penalty": 45,
+    "required_skill_aliases": {
+      "Java": ["Java"],
+      "JavaScript": ["JavaScript"],
+      "TypeScript": ["TypeScript", "Type Script"],
+      "Python": ["Python"],
+      "Node.js": ["Node.js", "NodeJS"],
+      "React": ["React", "React.js"],
+      "Angular": ["Angular"],
+      "Vue.js": ["Vue.js", "Vue"],
+      "HTML": ["HTML"],
+      "CSS": ["CSS"],
+      "SQL": ["SQL"],
+      "PostgreSQL": ["PostgreSQL", "Postgres"],
+      "MySQL": ["MySQL"],
+      "SQLite": ["SQLite"],
+      "MongoDB": ["MongoDB"],
+      "Redis": ["Redis"],
+      "C": ["C", "C programming", "C language", "programming in C"],
+      "Selenium": ["Selenium"],
+      "Playwright": ["Playwright"],
+      "Cypress": ["Cypress"],
+      "Appium": ["Appium"],
+      "Pytest": ["Pytest"],
+      "JUnit": ["JUnit"],
+      "REST API": ["REST API", "RESTful API"],
+      "SOAP": ["SOAP"],
+      "API testing": ["API testing"],
+      "Postman": ["Postman"],
+      "Manual testing": ["Manual testing"],
+      "Regression testing": ["Regression testing"],
+      "Functional testing": ["Functional testing"],
+      "Docker": ["Docker"],
+      "Kubernetes": ["Kubernetes", "K8s"],
+      "Linux": ["Linux"],
+      "Git": ["Git"],
+      "GitHub": ["GitHub"],
+      "GitLab": ["GitLab"],
+      "Jenkins": ["Jenkins"],
+      "GitLab CI/CD": ["GitLab CI/CD", "GitLab CI"],
+      "C#": ["C#", "C Sharp"],
+      "C++": ["C++", "Cpp"],
+      ".NET": [".NET", "dotnet"],
+      "Bash": ["Bash"],
+      "PowerShell": ["PowerShell"],
+      "Lua": ["Lua"],
+      "Go": ["Go language", "Golang"],
+      "Rust": ["Rust"],
+      "PHP": ["PHP"],
+      "Ruby": ["Ruby"],
+      "Kotlin": ["Kotlin"],
+      "Swift": ["Swift"],
+      "Terraform": ["Terraform"],
+      "Ansible": ["Ansible"],
+      "Jira": ["Jira"],
+      "Confluence": ["Confluence"],
+      "AWS": ["AWS", "Amazon Web Services"],
+      "Azure": ["Azure", "Microsoft Azure"],
+      "Google Cloud": ["Google Cloud", "GCP"],
+      "Unity": ["Unity", "Unity Engine"],
+      "Unreal Engine": ["Unreal Engine", "UE5"],
+      "Godot": ["Godot"],
+      "Arduino": ["Arduino"],
+      "Fusion 360": ["Fusion 360"],
+      "Altium Designer": ["Altium Designer", "Altium"],
+      "CAD": ["CAD", "computer-aided design"],
+      "Electronics diagnostics": ["electronics diagnostics", "electronic diagnostics"],
+      "Technical support": ["technical support", "IT support"],
+      "Troubleshooting": ["troubleshooting", "diagnostics"],
+      "Customer service": ["customer service", "customer support"],
+      "Installation": ["installation", "installing"],
+      "Maintenance": ["maintenance"],
+      "Repair": ["repair", "repairs"],
+      "Electronics": ["electronics", "electronic components"],
+      "3D printing": ["3D printing", "3D printer"]
+    }
+  },
+  "agent": {
+    "max_replans": 1,
+    "replan_if_fewer_acceptable": 8,
+    "max_replan_terms": 12,
+    "include_no_match_in_excel": false,
+    "near_miss_report_limit": 10,
+    "seniority_mismatch_penalty": 10,
+    "feedback_file": "data/job_feedback.csv",
+    "feedback_min_examples_per_class": 3,
+    "possible_match_min_score": 55,
+    "strong_match_min_score": 75,
+    "ollama_score_weight_percent": 70,
+    "max_description_chars": 6000,
+    "evaluation_max_tokens": 512
+  },
+  "user_preferences": {
+    "preferred_roles": [],
+    "locations": [],
+    "work_modes": [],
+    "contract_types": [],
+    "minimum_salary": null
+  },
+  "cv": {
+    "directory": "CV",
+    "supported_extensions": [
+      ".pdf",
+      ".docx"
+    ]
+  },
+  "telegram": {
+    "enabled": false
+  },
+  "ai": {
+    "provider": "ollama",
+    "enabled": true,
+    "base_url": "http://localhost:11434",
+    "model": "qwen2.5:3b",
+    "request_timeout_seconds": 120
+  }
+}
